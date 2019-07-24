@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
-const MovieCard = ({movie}) => {
+const MovieCard = ({movie, saveMovie}) => {
   const { title, director, metascore, stars } = movie;
   return (
     <div className="movie-card">
@@ -12,6 +13,7 @@ const MovieCard = ({movie}) => {
           Metascore: <strong>{metascore}</strong>
         </div>
         <h3>Actors</h3>
+        <div onClick={saveMovie} className="save-button">Save</div>
   
         {stars.map(star => (
           <div key={star} className="movie-star">

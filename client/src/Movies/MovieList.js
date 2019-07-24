@@ -22,7 +22,7 @@ const MovieList = props => {
   
   return (
     <div className="movie-list">
-      {console.log(movies)}
+      {console.log('Movies', movies)}
       {movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
       ))}
